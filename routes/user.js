@@ -6,11 +6,11 @@ var UserModel = schema.UserModel;
 
 user.get('/get', function (req, res) {
     res.send({data: UserModel})
-    console.log(data);
+    console.log(UserModel);
 });
 
 user.post('/post', function (req, res) {
-    data.push(req.body);
+    UserModel.push(req.body);
     console.log(req.body);
     res.send({status: 200, data: UserModel})
 });
